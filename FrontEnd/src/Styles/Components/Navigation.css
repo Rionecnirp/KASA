@@ -1,0 +1,17 @@
+.entete {
+    display: flex;
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.logoKasa {
+    cursor: pointer;
+}
+
+.logo-link {
+    display: inline-block;
+}

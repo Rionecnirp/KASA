@@ -13,15 +13,16 @@ const Cards = () => {
     }, [])
 
     return (
-        <div className='cards'>
+        <section className='cards'>
             {properties.map((property) => (
                 <Card 
-                key={property.id} 
+                key={property.id}
+                id={property.id}
                 cover={property.cover} 
                 title={property.title} />
             )
         )}
-        </div>
+        </section>
     );
 };
 

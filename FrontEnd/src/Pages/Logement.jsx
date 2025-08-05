@@ -3,45 +3,35 @@ import Navigation from '../Components/Navigation';
 import Collapse from '../Components/Collapse';
 import { useParams } from 'react-router-dom';
 import Error from './Error';
+import UseEffectProperties from '../Components/UseEffectProperties';
+import Carrousel from '../Components/Carrousel';
 
 const Logement = () => {
     const { id } = useParams()
-    const [infoLogement, SetInfoLogement] = useState(null)
+    const { infoProperties, hasError, isLoading } = UseEffectProperties(id)
 
-    useEffect(() => {
-            fetch(`http://localhost:8080/api/properties/${id}`)
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error('Not found')
-                }
-                return res.json()
-            })
-            .then((data) => SetInfoLogement(data))
-            .catch((err) => console.error(err))
-        }, [id])
-
-    if(!infoLogement || !infoLogement.id) {
-        return <Error />
-    }
+    if (hasError) return <Error />
+    if (isLoading) return <p>Chargement en cours...</p>
 
     return (
-        <div>
+        <>
             <Navigation />
+            <Carrousel images={infoProperties.pictures} alt={infoProperties.title} />
             <section>
                 <div>
-                    <h2>{infoLogement.title}</h2>
-                    <p>{infoLogement.location}</p>
-                    <p>{infoLogement.tags}</p>
+                    <h2>{infoProperties.title}</h2>
+                    <p>{infoProperties.location}</p>
+                    <p>{infoProperties.tags}</p>
                 </div>
                 <div>
-                    <h2>{infoLogement.title}</h2>
-                    <p>{infoLogement.host.name}</p>
+                    <h2>{infoProperties.title}</h2>
+                    <p>{infoProperties.host.name}</p>
                     <img
-                        src={infoLogement.host.picture}
+                        src={infoProperties.host.picture}
                         alt=""
                     />
                     <div></div>
-                    <p>{infoLogement.tags}</p>
+                    <p>{infoProperties.tags}</p>
                 </div>
             </section>
             <section>
@@ -54,8 +44,7 @@ const Logement = () => {
                     text="couac"
                 />
             </section>
-            <h1>Logement</h1>
-        </div>
+        </>
     );
 };
 

@@ -1,5 +1,15 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .banner img {
     width: 1240px;
     height: 223px;
     object-fit: cover;
+}
+
+.banner h1 {
+    position: absolute;
 }

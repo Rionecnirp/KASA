@@ -9,25 +9,24 @@ const Banner = () => {
     const location = path.split("/")[1]
 
     return (
-        <div>
-      {location === 'about' ? ( // on demande si l'on se trouve sur la page "à propos" alors on affiche ceci
-        <section className="banner">
-            <img
-              src={AboutBanner}
-              alt="chaine de montagnes enneigée"
-            />
-        </section>
-      ) : (
-        // si on ne se trouve pas sur la page "à propos" alors on affiche cela
-        <section className="banner">
-            <img
-              src={HomeBanner}
-              alt="cote rocheuse bord de mer"
-            />
-            <h1>Chez vous, partout et ailleurs</h1>
-        </section>
-      )}
-    </div>
+        <>
+            {location === 'about' ? ( 
+                <section className="banner">
+                    <img
+                    src={AboutBanner}
+                    alt="chaine de montagnes enneigée"
+                    />
+                </section>
+            ) : (
+                <section className="banner">
+                    <img
+                    src={HomeBanner}
+                    alt="cote rocheuse bord de mer"
+                    />
+                    <h1>Chez vous, partout et ailleurs</h1>
+                </section>
+            )}
+        </>
     );
 };
 

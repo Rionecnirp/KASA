@@ -7,6 +7,8 @@ import UseEffectProperties from '../Components/UseEffectProperties/UseEffectProp
 import Carrousel from '../Components/Carrousel/Carrousel';
 import Footer from '../Components/Footer/Footer';
 import Rating from '../Components/Rating/Rating';
+import Host from '../Components/Host/Host';
+import Appartment from '../Components/Appartment/Appartment';
 
 const Logement = () => {
     const { id } = useParams()
@@ -27,19 +29,16 @@ const Logement = () => {
                 <Carrousel images={infoProperties.pictures} alt={infoProperties.title} />
                 
                 <section className='Logement'>
-                    <div className='InformationsLogement'>
-                        <h2>{infoProperties.title}</h2>
-                        <p>{infoProperties.location}</p>
-                        <p>{infoProperties.tags}</p>
-                    </div>
-                    <div className='InformationsHoteLogement'>
-                        <p>{infoProperties.host.name}</p>
-                        <img
-                            src={infoProperties.host.picture}
-                            alt=""
-                        />
-                        <Rating stars={infoProperties.rating} />
-                    </div>
+                    <Appartment
+                    title={infoProperties.title} 
+                    location={infoProperties.location}
+                    tags={infoProperties.tags}
+                    />
+                    <Host
+                    name={infoProperties.host.name}
+                    picture={infoProperties.host.picture}
+                    rating={infoProperties.rating}
+                    />
                 </section>
 
                 <section className='CollapseLogement'>

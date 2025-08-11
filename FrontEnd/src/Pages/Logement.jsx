@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Navigation from '../Components/Navigation/Navigation';
 import Collapse from '../Components/Collapse/Collapse';
 import { useNavigate, useParams } from 'react-router-dom';
-import Error from './Error';
 import UseEffectProperties from '../Components/UseEffectProperties/UseEffectProperties';
 import Carrousel from '../Components/Carrousel/Carrousel';
 import Footer from '../Components/Footer/Footer';
-import Rating from '../Components/Rating/Rating';
 import Host from '../Components/Host/Host';
 import Appartment from '../Components/Appartment/Appartment';
+import '../Style/Logement.css'
 
 const Logement = () => {
     const { id } = useParams()
@@ -16,11 +15,12 @@ const Logement = () => {
     const { infoProperties, hasError, isLoading } = UseEffectProperties(id)
 
     useEffect(() => {
-        if (hasError) {
+        if (!isLoading && hasError) {
             navigate('/*')
         }
     }, [hasError, navigate])
     if (isLoading) return <p>Chargement en cours...</p>
+    if (!infoProperties) return null
 
     return (
         <>
@@ -48,7 +48,9 @@ const Logement = () => {
                     />
                     <Collapse
                         title="Equipement"
-                        text={infoProperties.equipments}
+                        text={infoProperties.equipments.map((equipment, index) => (
+                            <span key={index}>{equipment}</span>
+                        ))}
                     />
                 </section>
 

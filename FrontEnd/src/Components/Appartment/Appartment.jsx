@@ -1,12 +1,15 @@
 import React from 'react';
+import './Appartment.css'
 
 const Appartment = ({title, location, tags}) => {
     return (
-        <div className='InformationsLogement'>
+        <article className='InformationsLogement'>
             <h2>{title}</h2>
-            <p>{location}</p>
-            <p>{tags}</p>
-        </div>
+            <h3>{location}</h3>
+            <div className='Tags'>{tags.map((tag, index) => (
+                <span key={index} className='Tag'>{tag}</span>
+            ))}</div>
+        </article>
     );
 };
 

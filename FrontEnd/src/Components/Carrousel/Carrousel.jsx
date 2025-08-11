@@ -3,7 +3,7 @@ import UseEffectProperties from '../UseEffectProperties/UseEffectProperties';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-const Caroussel = ({ images }) => {
+const Carrousel = ({ images }) => {
     const { id } = useParams()
     const { infoProperties, hasError, isLoading } = UseEffectProperties(id)
     const [Index, SetIndex] = useState(0)
@@ -12,7 +12,6 @@ const Caroussel = ({ images }) => {
     if (isLoading) return <p>Chargement...</p>;
     if (hasError || !infoProperties) return <p>Erreur de chargement</p>;
 
-    console.log(images)
     const NextSlide = () => {
         SetIndex((Index) => Index === NbSlides - 1 ? 0 : Index + 1,)
     }
@@ -40,4 +39,4 @@ const Caroussel = ({ images }) => {
     );
 };
 
-export default Caroussel;
+export default Carrousel;

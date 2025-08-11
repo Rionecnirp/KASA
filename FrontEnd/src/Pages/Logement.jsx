@@ -6,6 +6,7 @@ import Error from './Error';
 import UseEffectProperties from '../Components/UseEffectProperties/UseEffectProperties';
 import Carrousel from '../Components/Carrousel/Carrousel';
 import Footer from '../Components/Footer/Footer';
+import Rating from '../Components/Rating/Rating';
 
 const Logement = () => {
     const { id } = useParams()
@@ -22,33 +23,37 @@ const Logement = () => {
     return (
         <>
             <Navigation />
-            <Carrousel images={infoProperties.pictures} alt={infoProperties.title} />
-            <section>
-                <div>
-                    <h2>{infoProperties.title}</h2>
-                    <p>{infoProperties.location}</p>
-                    <p>{infoProperties.tags}</p>
-                </div>
-                <div>
-                    <h2>{infoProperties.title}</h2>
-                    <p>{infoProperties.host.name}</p>
-                    <img
-                        src={infoProperties.host.picture}
-                        alt=""
+            <main>
+                <Carrousel images={infoProperties.pictures} alt={infoProperties.title} />
+                
+                <section className='Logement'>
+                    <div className='InformationsLogement'>
+                        <h2>{infoProperties.title}</h2>
+                        <p>{infoProperties.location}</p>
+                        <p>{infoProperties.tags}</p>
+                    </div>
+                    <div className='InformationsHoteLogement'>
+                        <p>{infoProperties.host.name}</p>
+                        <img
+                            src={infoProperties.host.picture}
+                            alt=""
+                        />
+                        <Rating stars={infoProperties.rating} />
+                    </div>
+                </section>
+
+                <section className='CollapseLogement'>
+                    <Collapse
+                    title="Description"
+                    text={infoProperties.description}
                     />
-                    <div></div>
-                    <p>{infoProperties.tags}</p>
-                </div>
-            </section>
-            <Collapse
-                 title="Description"
-                 text={infoProperties.description}
-            />
-            <Collapse
-                title="Equipement"
-                text={infoProperties.equipments}
-            />
-            
+                    <Collapse
+                        title="Equipement"
+                        text={infoProperties.equipments}
+                    />
+                </section>
+
+            </main>
             <Footer />
         </>
     );

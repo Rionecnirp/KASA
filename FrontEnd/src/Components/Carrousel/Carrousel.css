@@ -1,0 +1,40 @@
+.picture {
+    width: 1240px;
+    height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.counter {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.carrousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.carrouselBtn {
+    position: absolute;
+    background: transparent;
+    border: none;
+}
+
+.carrouselBtn:hover {
+    border: none;
+}
+
+.leftBtn {
+    left: 100px;
+}
+
+.rightBtn {
+    right: 100px;
+}

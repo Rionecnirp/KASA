@@ -2,6 +2,9 @@ import React from 'react';
 import UseEffectProperties from '../UseEffectProperties/UseEffectProperties';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
+import './Carrousel.css'
+import ArrowLeft from '../../assets/arrow_left.png'
+import ArrowRight from '../../assets/arrow_right.png'
 
 const Carrousel = ({ images }) => {
     const { id } = useParams()
@@ -22,7 +25,7 @@ const Carrousel = ({ images }) => {
     
     if (NbSlides === 1) {
         return (
-            <section className='caroussel'>
+            <section className='carrousel'>
                 <img src={images[0]} alt={`Slide ${Index + 1}`} />
             </section>
         )
@@ -30,11 +33,15 @@ const Carrousel = ({ images }) => {
 
 
     return (
-        <section className='caroussel'>
-            <button onClick={PreviousSlide}>-1</button>
-            <img src={images[Index]} alt={`Slide ${Index + 1}`} />
-            <button onClick={NextSlide}>+1</button>
-            <div>{Index + 1} / {NbSlides}</div>
+        <section className='carrousel'>
+            <button className='leftBtn carrouselBtn'>
+                <img src={ArrowLeft} onClick={PreviousSlide} alt="" />
+            </button>
+            <img className='picture' src={images[Index]} alt={`Slide ${Index + 1}`} />
+            <button className='rightBtn carrouselBtn'>
+                <img src={ArrowRight} onClick={NextSlide} alt="" />
+            </button>
+            <div className='counter'>{Index + 1} / {NbSlides}</div>
         </section>
     );
 };

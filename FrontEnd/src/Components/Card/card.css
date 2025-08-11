@@ -1,0 +1,30 @@
+.card {
+    height: 340px;
+    width: 340px;
+}
+
+article img {
+	border-radius: 10px;
+	width: 340px;
+    height: 340px;
+}
+
+article {
+    display: flex;
+    align-items: end;
+}
+
+.p_logement {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+article p {
+    margin: 0px;
+}

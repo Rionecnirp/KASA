@@ -1,18 +1,20 @@
 import React from 'react';
 
-import Navigation from '../Components/Navigation';
-import Footer from '../Components/Footer';
-import Card from '../Components/Card';
-import Cards from '../Components/Cards';
-import Banner from '../Components/Banner';
+import Navigation from '../Components/Navigation/Navigation';
+import Footer from '../Components/Footer/Footer';
+import Card from '../Components/Card/Card';
+import Cards from '../Components/Cards/Cards';
+import Banner from '../Components/Banner/Banner';
 
 const Home = () => {
 
     return (
         <>
             <Navigation />
-            <Banner />
-            <Cards />
+            <main>
+                <Banner />
+                <Cards />
+            </main>
             <Footer />
         </>
     );

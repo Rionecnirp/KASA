@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import Navigation from '../Components/Navigation';
-import Collapse from '../Components/Collapse';
-import { useParams } from 'react-router-dom';
+import Navigation from '../Components/Navigation/Navigation';
+import Collapse from '../Components/Collapse/Collapse';
+import { useNavigate, useParams } from 'react-router-dom';
 import Error from './Error';
-import UseEffectProperties from '../Components/UseEffectProperties';
-import Carrousel from '../Components/Carrousel';
+import UseEffectProperties from '../Components/UseEffectProperties/UseEffectProperties';
+import Carrousel from '../Components/Carrousel/Carrousel';
+import Footer from '../Components/Footer/Footer';
 
 const Logement = () => {
     const { id } = useParams()
+    const navigate = useNavigate()
     const { infoProperties, hasError, isLoading } = UseEffectProperties(id)
 
-    if (hasError) return <Error />
+    useEffect(() => {
+        if (hasError) {
+            navigate('/*')
+        }
+    }, [hasError, navigate])
     if (isLoading) return <p>Chargement en cours...</p>
 
     return (
@@ -34,16 +40,16 @@ const Logement = () => {
                     <p>{infoProperties.tags}</p>
                 </div>
             </section>
-            <section>
-                <Collapse
-                    title="Description"
-                    text="couac"
-                />
-                <Collapse
-                    title="Equipement"
-                    text="couac"
-                />
-            </section>
+            <Collapse
+                 title="Description"
+                 text={infoProperties.description}
+            />
+            <Collapse
+                title="Equipement"
+                text={infoProperties.equipments}
+            />
+            
+            <Footer />
         </>
     );
 };

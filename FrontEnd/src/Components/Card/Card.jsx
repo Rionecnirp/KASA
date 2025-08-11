@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../Styles/Components/card.css'
+import './card.css'
 
 const Card = ({id, cover, title}) => {
     
     return (
-        <NavLink to={`Logement/${id}`}>
-            <div key={id} className='card'>
+        <NavLink to={`Logement/${id}`} className='card'>
+            <article key={id} >
                 <img src={cover} alt="" />
-                <div>
+                <p className='p_logement'>
                     {title}
-                </div>
-            </div>
+                </p>
+            </article>
         </NavLink>
     );
 };

@@ -1,11 +1,12 @@
 .entete {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 ul{
     display: flex;
-    gap: 10px;
+    gap: 60px;
     list-style: none;
 }
 
@@ -15,4 +16,17 @@ ul{
 
 .logo-link {
     display: inline-block;
+}
+
+li a {
+    color: black;
+    font-size: 24px;
+}
+
+li a:hover {
+    color: black;
+}
+
+.liActif {
+    text-decoration: underline;
 }

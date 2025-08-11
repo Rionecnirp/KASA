@@ -1,6 +1,6 @@
 import React from 'react';
-import LogoKasaWhite from '../assets/LOGO_white.png'
-import '../Styles/Components/Footer.css'
+import LogoKasaWhite from '../../assets/LOGO_white.png'
+import './Footer.css'
 
 
 const Footer = () => {

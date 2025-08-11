@@ -1,5 +1,5 @@
 import React from 'react';
-import UseEffectProperties from './UseEffectProperties';
+import UseEffectProperties from '../UseEffectProperties/UseEffectProperties';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -32,9 +32,9 @@ const Caroussel = ({ images }) => {
 
     return (
         <section className='caroussel'>
-            <button onClick={PreviousSlide}></button>
+            <button onClick={PreviousSlide}>-1</button>
             <img src={images[Index]} alt={`Slide ${Index + 1}`} />
-            <button onClick={NextSlide}></button>
+            <button onClick={NextSlide}>+1</button>
             <div>{Index + 1} / {NbSlides}</div>
         </section>
     );

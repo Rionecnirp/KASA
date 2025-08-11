@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
-import Arrow from '../assets/Arrow.png'
-import '../Styles/Components/Collapse.css'
+import Arrow from '../../assets/Arrow.png'
+import './Collapse.css'
 
 const Collapse = ({title, text}) => {
     const [ArrowUp, ArrowDown] = useState(false)
 
     return ArrowUp ? (
-        <div>
+        <>
              <div className='collapse' onClick={() => ArrowDown(false)}>
-            {title}
+            <p>{title}</p>
             <img
             src={Arrow}
             alt="arrow up"
             role="button"
             />
             </div>
-            <div>{text}</div>
-        </div>
+            <p>{text}</p>
+        </>
        
     ) : (
-        <div>
+        <>
             <div className='collapse' onClick={() => ArrowDown(true)}>
-                {title}
+                <p>{title}</p>
                 <img
                 src={Arrow}
                 alt="arrow down"
                 role="button"
                 />
             </div>
-        </div>
+        </>
         
     );
 };

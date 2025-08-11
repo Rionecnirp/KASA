@@ -5,8 +5,8 @@ import './card.css'
 const Card = ({id, cover, title}) => {
     
     return (
-        <NavLink to={`Logement/${id}`} className='card'>
-            <article key={id} >
+        <NavLink to={`Logement/${id}`}>
+            <article className='card' key={id} >
                 <img src={cover} alt="" />
                 <p className='p_logement'>
                     {title}

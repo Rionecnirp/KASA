@@ -1,0 +1,8 @@
+.aboutCollapseContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 1024px;
+    margin-bottom: 30px;
+    gap: 30px;
+}

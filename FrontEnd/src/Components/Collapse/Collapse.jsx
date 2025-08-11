@@ -6,21 +6,23 @@ const Collapse = ({title, text}) => {
     const [ArrowUp, ArrowDown] = useState(false)
 
     return ArrowUp ? (
-        <>
-             <div className='collapse' onClick={() => ArrowDown(false)}>
-            <p>{title}</p>
-            <img
-            src={Arrow}
-            alt="arrow up"
-            role="button"
-            />
+        <article className='collapseContainer'>
+            <div className='collapseTitle' onClick={() => ArrowDown(false)}>
+                <p>{title}</p>
+                <img
+                src={Arrow}
+                alt="arrow up"
+                role="button"
+                />
             </div>
-            <p>{text}</p>
-        </>
+            <div className='collapseText'>
+                {text}
+            </div>
+        </article>
        
     ) : (
-        <>
-            <div className='collapse' onClick={() => ArrowDown(true)}>
+        <article className='collapseContainer'>
+            <div className='collapseTitle' onClick={() => ArrowDown(true)}>
                 <p>{title}</p>
                 <img
                 src={Arrow}
@@ -28,7 +30,7 @@ const Collapse = ({title, text}) => {
                 role="button"
                 />
             </div>
-        </>
+        </article>
         
     );
 };

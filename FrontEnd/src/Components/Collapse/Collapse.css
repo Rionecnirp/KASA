@@ -1,4 +1,4 @@
-.collapse {
+.collapseTitle {
     background-color: #ff6060;
     border-radius: 10px;
     display: flex;
@@ -6,18 +6,33 @@
     padding: 10px;
     padding-left: 15px;
     padding-right: 20px;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    align-items: center;    
 }
 
-.collapse img {
+.collapseContainer {
+    width: 100%;
+}
+
+.collapseTitle img {
     height: 13px;
 }
 
-.collapse p {
+.collapseTitle p {
     margin: 0px;
     font-size: 24px;
     font-weight: bold;
     color: white;
+}
+
+
+
+.collapseText {
+    background-color: #f6f6f6;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px;
+    border-radius: 5px;
+    flex-direction: column;
+    display: flex;
+    text-align: justify;
 }

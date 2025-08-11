@@ -1,0 +1,22 @@
+.HostInfo {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: end;
+}
+
+.HostPicture {
+    border-radius: 90%;
+    object-fit: cover;
+    width: 64px;
+    height: 64px;
+}
+
+.HostName {
+    font-weight: 500;
+    font-size: 18px;
+    color: #ff6060;
+    width: 90px;
+    word-break: normal;
+    margin: 0px;
+}

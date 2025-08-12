@@ -19,4 +19,6 @@
     width: 90px;
     word-break: normal;
     margin: 0px;
+    text-align: end;
+    margin-right: 10px;
 }

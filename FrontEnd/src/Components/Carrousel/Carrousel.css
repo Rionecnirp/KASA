@@ -32,9 +32,10 @@
 }
 
 .leftBtn {
-    left: 100px;
+    left: 20px;
+    
 }
 
 .rightBtn {
-    right: 100px;
+    right: 20px;
 }

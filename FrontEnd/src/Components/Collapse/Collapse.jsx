@@ -5,34 +5,24 @@ import './Collapse.css'
 const Collapse = ({title, text}) => {
     const [ArrowUp, ArrowDown] = useState(false)
 
-    return ArrowUp ? (
+    return (
         <article className='collapseContainer'>
-            <div className='collapseTitle' onClick={() => ArrowDown(false)}>
+            <div className='collapseTitle' >
                 <p>{title}</p>
                 <img
-                src={Arrow}
-                alt="arrow up"
-                role="button"
+                    className={`arrow ${ArrowUp ? 'Up' : ''}`}
+                    onClick={() => ArrowDown(!ArrowUp)}
+                    src={Arrow}
+                    alt="arrow up"
+                    role="button"
                 />
             </div>
-            <div className='collapseText'>
+            <div className={`collapseText ${ArrowUp ? 'Out' : ''}`}>
                 {text}
-            </div>
+                </div>
         </article>
        
-    ) : (
-        <article className='collapseContainer'>
-            <div className='collapseTitle' onClick={() => ArrowDown(true)}>
-                <p>{title}</p>
-                <img
-                src={Arrow}
-                alt="arrow down"
-                role="button"
-                />
-            </div>
-        </article>
-        
-    );
+    )
 };
 
 export default Collapse;

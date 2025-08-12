@@ -1,7 +1,8 @@
+
+
 .entete {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
 }
 
 ul{
@@ -29,4 +30,13 @@ li a:hover {
 
 .liActif {
     text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    
+}
+
+@media (max-width: 1024px) {
+  header {
+    width: 100%;
+  }
 }

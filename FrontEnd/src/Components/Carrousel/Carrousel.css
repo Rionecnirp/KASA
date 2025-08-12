@@ -39,3 +39,27 @@
 .rightBtn {
     right: 20px;
 }
+
+@media (max-width: 768px) {
+    .picture {
+        width: 335px;
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    .carrouselBtn img {
+        width: 24px;
+    }
+
+    .leftBtn {
+    left: 5px;
+    }
+
+    .rightBtn {
+        right: 5px;
+    }
+
+    .counter {
+        opacity: 0;
+    }
+}

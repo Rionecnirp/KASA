@@ -16,3 +16,9 @@
 .empty {
     color: #e3e3e3;
 }
+
+@media (max-width: 768px) {
+    .fa-xl {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,47 @@
+.Error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Error h1, h2{
+    color : #ff6060;
+    margin: 50px 0px 50px 0px;
+}
+
+.Error h1 {
+    font-weight: 700;
+    font-size: 288px;
+    
+}
+
+.Error h2 {
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.Error a {
+    margin-top: 150px;
+    color: black;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .Error h1 {
+        font-size: 96px;
+    }
+
+    .Error h2 {
+        font-size: 18px;
+        text-align: center;
+        width: 260px;
+    }
+
+    .Error a {
+        font-size: 14px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+}

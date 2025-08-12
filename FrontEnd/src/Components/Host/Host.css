@@ -22,3 +22,21 @@
     text-align: end;
     margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+    .InformationsHoteLogement {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .HostName {
+        font-size: 12px;
+        width: 60px;
+    }
+
+    .HostPicture {
+        width: 32px;
+        height: 32px;
+    }
+}

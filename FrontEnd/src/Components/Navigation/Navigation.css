@@ -34,3 +34,27 @@ li a:hover {
     text-underline-offset: 3px;
     text-decoration-thickness: 1.5px;
 }
+
+@media (max-width: 768px) {
+    .LogoKasa {
+        width: 145px;
+    }
+
+    ul {
+        gap: 20px;
+    }
+
+    li a {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .entete {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .liActif {
+        text-decoration-thickness: 1px;
+    }
+}

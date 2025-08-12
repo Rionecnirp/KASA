@@ -10,3 +10,18 @@
     margin-bottom: 30px;
     gap: 80px;
 }
+
+@media (max-width: 768px) {
+    .Logement {
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .CollapseLogement {
+        justify-content: unset;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

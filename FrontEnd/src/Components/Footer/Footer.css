@@ -1,0 +1,12 @@
+footer p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    footer p {
+        font-size: 12px;
+        width: 130px;
+        text-align: center;
+    }
+}

@@ -70,4 +70,10 @@ button {
         padding: 0px;
         box-sizing: border-box;
     }
+
+    header, main {
+      width: 90%;
+      margin: auto;
+    }
+  
 }

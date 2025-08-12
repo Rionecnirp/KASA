@@ -59,3 +59,25 @@
     padding: 20px;
     opacity: 1;
 }
+
+@media (max-width: 768px) {
+    .collapseTitle {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+        padding-right: 15px;
+    }
+
+    .collapseTitle p {
+        font-size: 13px;
+    }
+
+    .collapseTitle img {
+        width: 16px;
+        height: 9px;
+    }
+
+    .collapseText {
+        font-size: 12px;
+    }
+}

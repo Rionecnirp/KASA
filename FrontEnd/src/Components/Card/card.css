@@ -13,11 +13,23 @@
 
 .p_logement {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     color: white;
     position: absolute;
     margin-left: 20px;
     margin-bottom: 20px;
     width: 300px;
     text-align: left;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 335px;
+        height: 255px;
+    }
+
+    .card img {
+        width: 335px;
+        height: 255px;
+    }
 }

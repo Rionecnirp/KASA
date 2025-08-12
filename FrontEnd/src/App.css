@@ -1,13 +1,27 @@
 #root {
   margin: 0 auto;
   font-family: 'Montserrat';
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+main, header {
+  max-width: 1440px;
 }
 
 header {
-    width: 1240px;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  align-self: center;
+}
+
+main {
+  flex-grow: 1;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer {
@@ -20,34 +34,40 @@ footer {
     height: 209px;
 }
 
-main {
-  flex: 1;
-  width: 1240px;
-  margin: auto;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  height: 100%;
+.rooty {
+  display: flex;
+  flex-direction: column;
 }
 
 a {
   text-decoration: none;
 }
 
-.rooty {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;  
-}
-
 button {
   cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-  body, header, main, footer {
+@media (min-width: 1440px) {
+  header {
+    min-width: 1440px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  body, footer {
     width: 100%;
   }
+
+  header, main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  body, header, main{
+        width: auto;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
 }

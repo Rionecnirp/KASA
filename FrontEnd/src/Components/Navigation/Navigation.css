@@ -1,8 +1,8 @@
-
-
 .entete {
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 ul{
@@ -22,6 +22,7 @@ ul{
 li a {
     color: black;
     font-size: 24px;
+    font-weight: 500;
 }
 
 li a:hover {
@@ -32,11 +33,4 @@ li a:hover {
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 1.5px;
-    
-}
-
-@media (max-width: 1024px) {
-  header {
-    width: 100%;
-  }
 }

@@ -21,7 +21,8 @@
 }
 
 .Error a {
-    margin-top: 150px;
+    margin-top: 100px;
+    margin-bottom: 125px;
     color: black;
     text-decoration: underline;
     font-weight: 500;

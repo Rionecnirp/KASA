@@ -1,6 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Card from '../Card/Card';
-import './cards.css'
+import './cards.css';
+
+/** Ce composant retourne :
+ * Un useState "léger" où on récupère les informations des logements.
+ * Il devrait être possible d'améliorer le composant en passant par le composant UseEffectProperties.jsx ? Cela demanderait de retravailler le composant.
+ * Une section où on place un ou plusieurs composants Card.
+ */
 
 const Cards = () => {
 

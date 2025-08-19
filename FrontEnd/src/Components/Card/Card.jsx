@@ -1,6 +1,10 @@
-import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import './card.css'
+import './card.css';
+
+/** Ce composant retourne :
+ * Un article avec l'image du logement et le titre du logement.
+ * Un lien permet de renvoyer au logement approprié via son id.
+ */
 
 const Card = ({id, cover, title}) => {
     

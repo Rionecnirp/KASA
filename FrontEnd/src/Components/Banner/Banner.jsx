@@ -1,8 +1,12 @@
-import React from 'react';
 import { useLocation } from 'react-router-dom';
 import HomeBanner from '../../assets/HomeBanner.jpg'
 import AboutBanner from '../../assets/AboutBanner.jpg'
 import './banner.css'
+
+/** Ce composant retourne :
+ * Une section avec l'image de la bannière.
+ * Dépendant du chemin, une image différente est utilisée.
+ */
 
 const Banner = () => {
     const path = useLocation().pathname

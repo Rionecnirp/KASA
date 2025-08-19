@@ -1,10 +1,15 @@
-import React from 'react';
 import UseEffectProperties from '../UseEffectProperties/UseEffectProperties';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import './Carrousel.css'
 import ArrowLeft from '../../assets/arrow_left.png'
 import ArrowRight from '../../assets/arrow_right.png'
+
+/** Ce composant retourne :
+ * Une section contenant 2 boutons (pour avancer/reculer dans la gallerie d'images), une image/gallerie d'images et un compteur pour savoir à quelle image dans la gallerie on se trouve.
+ * S'il n'y a qu'une image dans la gallerie, alors pas de compteur ni de boutons.
+ * NextSlide/PreviousSlide servent de fonctions pour les boutons.
+ */
 
 const Carrousel = ({ images }) => {
     const { id } = useParams()
@@ -26,7 +31,7 @@ const Carrousel = ({ images }) => {
     if (NbSlides === 1) {
         return (
             <section className='carrousel'>
-                <img src={images[0]} alt={`Slide ${Index + 1}`} />
+                <img className='picture' src={images[0]} alt={`Slide ${Index + 1}`} />
             </section>
         )
     }

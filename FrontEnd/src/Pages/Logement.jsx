@@ -9,6 +9,9 @@ import Host from '../Components/Host/Host';
 import Appartment from '../Components/Appartment/Appartment';
 import '../Style/Logement.css'
 
+/* 
+*/
+
 const Logement = () => {
     const { id } = useParams()
     const navigate = useNavigate()

@@ -5,6 +5,13 @@ import Collapse from '../Components/Collapse/Collapse';
 import Footer from '../Components/Footer/Footer';
 import '../Style/About.css'
 
+/** Page à propos. Dans cette dernière il y a :
+* Le composant "Navigation", qui sert de Header.
+* Un main avec le composant "Banner" pour l'image et 4 composants "Collapse" pour les menus déroulants.
+* Chaque Collapse contient du texte spécifié dans le composant lui même.
+* Le composant "Footer", qui sert de Footer.
+ */
+
 const About = () => {
     return (
         <>

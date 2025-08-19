@@ -1,7 +1,11 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoKasa from '../../assets/LOGO_KASA.png';
 import './Navigation.css'
+
+/** Ce composant retourne :
+ * Un header, qui lui même retourne un nav.
+ * Dans le nav, il y a le logo et une courte liste de toutes les pages.
+ */
 
 const Navigation = () => {
     return (
